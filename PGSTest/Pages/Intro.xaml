@@ -1,0 +1,40 @@
+﻿<Page x:Class="PGSTest.Pages.Intro"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:PGSTest.Pages"
+      mc:Ignorable="d"
+      d:DesignHeight="320" d:DesignWidth="400"
+      Title="Intro">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Wprowadzenie"
+                   VerticalAlignment="Top" Grid.Row="0" FontSize="18" />
+
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0"
+                   Text="Zostaniesz poproszony o podanie kilku informacji" TextWrapping="Wrap" VerticalAlignment="Top"
+                   Width="284" Height="15" Grid.Row="1" />
+        <TextBlock HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
+                   Width="284" Height="94" FontSize="10" Grid.Row="1">
+            <Run Text="Wprowadzone dane można dowolnie edytować " />
+            <Run FontWeight="Bold" Text="przed" /><Run Text=" wyświetleniem ich na końcu." /><LineBreak />
+            <Run Text="Dzięki za współpracę :)" />
+        </TextBlock>
+
+        <Button x:Name="CancelBtn" Content="Cancel" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center"
+                Width="75" Margin="316,0,0,5" Click="CancelBtn_Click" />
+        <Button x:Name="FinishBtn" Content="Finish" IsEnabled="False" HorizontalAlignment="Left" Grid.Row="2"
+                VerticalAlignment="Center" Width="75" Margin="236,0,0,5" />
+        <Button x:Name="NextBtn" Content="Next" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center"
+                Width="75" Margin="156,0,0,5" Click="NextBtn_Click" />
+        <Button x:Name="BackBtn" Content="Back" IsEnabled="False" HorizontalAlignment="Left" Grid.Row="2"
+                VerticalAlignment="Center" Width="75" Margin="76,0,0,5" />
+    </Grid>
+</Page>

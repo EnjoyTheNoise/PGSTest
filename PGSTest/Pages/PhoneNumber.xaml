@@ -1,0 +1,39 @@
+﻿<Page x:Class="PGSTest.Pages.PhoneNumber"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:PGSTest.Pages"
+      mc:Ignorable="d"
+      d:DesignHeight="320" d:DesignWidth="400"
+      Title="PhoneNumber">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Podaj swój nr telefonu"
+                   VerticalAlignment="Top" FontSize="14" Grid.Row="0" />
+        <TextBlock HorizontalAlignment="Left" Margin="10,29,0,0" TextWrapping="Wrap" Text="Pamiętaj aby składał się wyłącznie z cyfr (ew. znaku plusa)!"
+                   VerticalAlignment="Top" Grid.Row="0" FontSize="11" />
+
+        <TextBox x:Name="NumberTextBox" HorizontalAlignment="Left" Height="25"
+                 Text="{Binding UserPhoneNumber, Mode=TwoWay}" VerticalContentAlignment="Center" TextWrapping="NoWrap"
+                 VerticalAlignment="Top" Width="120" Margin="174,98,0,0" Grid.Row="1" KeyUp="NumberTextBox_KeyUp"
+                 Loaded="NumberTextBox_Loaded" />
+        <Label Content="Nr telefonu:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,98,0,0" Height="25"
+               Grid.Row="1" />
+
+        <Button x:Name="CancelBtn" Content="Cancel" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center"
+                Width="75" Margin="316,0,0,5" Click="CancelBtn_Click" />
+        <Button x:Name="FinishBtn" Content="Finish" HorizontalAlignment="Left" Grid.Row="2"
+                VerticalAlignment="Center" Width="75" Margin="236,0,0,5" Click="FinishBtn_Click"/>
+        <Button x:Name="NextBtn" Content="Next" IsEnabled="False" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center"
+                Width="75" Margin="156,0,0,5" />
+        <Button x:Name="BackBtn" Content="Back" HorizontalAlignment="Left" Grid.Row="2"
+                VerticalAlignment="Center" Width="75" Margin="76,0,0,5" Click="BackBtn_Click"/>
+    </Grid>
+</Page>
