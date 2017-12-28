@@ -29,7 +29,6 @@ namespace PGSTest.Pages
 
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
-            BackBtn.IsEnabled = false;
             NavigationService?.Navigate(new Intro());
         }
 
